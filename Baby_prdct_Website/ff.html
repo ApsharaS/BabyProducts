@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f8f8f8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;  
+            gap: 20px;
+            width: 1000px;
+            /* margin: 40px auto; */
+            margin-left: 120px;
+            /* background: white; */
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+            margin-top: 40px;
+        }
+
+     
+       
+        .c{
+            border: 1px solid black;
+            border-radius: 8px;
+            position: relative;
+        }
+        .c img{
+            position: relative;
+        }
+        .c i{
+    position: absolute;
+    left: 270px;
+    top: 20px;
+}
+        .product-image img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Thumbnail Images */
+        .thumbnail {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .thumbnail img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid black;
+        }
+        .product-details h1 {
+            font-size: 20px;
+            color: rgb(51, 51, 51);
+        }
+
+        .rating {
+            color: #ff9900;
+            font-size: 18px;
+        }
+
+        .price {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .discounted {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .quantity {
+            margin: 10px 0;
+        }
+
+        .quantity input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .add-to-cart {
+           
+            background: #ff6600;
+            color: white;
+            /* padding: 10px; */
+            font-size: 18px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .add-to-cart:hover {
+            background: #e65c00;
+        }
+
+        /* Features */
+        .features {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .quantity{
+            border: 2px solid black;
+            width: 100px;
+            height: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+        .btns{
+            display: flex;
+            gap: 40px;
+        }
+        .features{
+            display: flex;
+            justify-content:space-between;
+        }.features i{
+            color: rgb(73, 233, 204);
+           
+        }
+      
+        *{
+    margin: 0;
+    padding: 0;
+}
+.head-container{
+    display: flex;
+    justify-content: space-around;
+}
+.search,.icons{
+    padding: 30px;
+    font-size: 30px;
+}
+.search{
+    position: relative;
+  
+    margin-right: 30px;
+}
+.search input{
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 200px;
+}
+.search i{
+    position: absolute;
+    left: 40px;
+    top: 22%;
+    transform: translateY(100%);
+    font-size: 20px;
+}
+.logo{
+    padding: 20px;
+}
+.logos{
+    display: flex;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 20px;
+    background-color: rgb(73, 233, 204);
+    padding: 20px;
+}
+.navbar li{
+    list-style-type: none;
+}
+/* #about{
+    margin-left: 250px;
+} */
+/* #review{
+    margin-left: 200px;
+} */
+.main-review{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.revc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.revc img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.rev-box{
+    border: 1px solid transparent;
+    background-color: rgb(73, 233, 204);
+    line-height: 2;
+height: auto;
+}
+.cus-review{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#about ul{
+    margin-left: 120px;
+}
+#about li{
+    margin-left: 120px;
+}
+#about{
+    margin-top: 20px;
+}
+.best-product{
+    display: flex;
+    justify-content:center;
+
+   }
+.best-products{
+    width: 270px;
+    height: 480px;
+    /* border: 2px solid black; */
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-left: 25px;
+     margin-top: 20px;
+}
+.best-products img{
+    width: 280px;
+    height: 250px;
+}
+.btn{
+    display: flex;
+    margin-top: 10px;
+}
+.btn button{
+    background-color: white;
+    border: 2px solid rgba(241, 149, 11, 0.96);
+    border-radius: 8px;
+}
+.btn button:hover{
+    background-color: orange;
+    color: white;
+    transition: background-color 0.7s ease-in-out;
+}
+.btn i:hover{
+    background-color: orange;
+    transition: background-color 0.7s ease-in-out;
+    border-radius: 100%;
+}
+.footcontainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(73, 233, 204);
+    margin-top: 40px;
+    line-height: 2;
+}
+#foot{
+    margin-top: 50px;
+    background-color: rgb(73, 233, 204);
+}
+.box-3 i{
+    font-size: 30px;
+}
+.fl i{
+    font-size: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head-container">
+            <div class="logo">
+               <div class="logos">
+               <a href="task.html"> <img style="width: 150px;border-radius: 100%;" src="logo.jpg"></a>
+                <h1 style="margin-top: 30px;">Tiny Fist Care</h1>
+               </div>
+            </div>
+            <div class="search">
+                    <input type="text" placeholder="      Search...">
+                    <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="icons">
+                <i class='bx bx-heart'></i>
+                <a href="cart.html"><i style="color: black;" class='bx bx-shopping-bag'></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- nav bar -->
+
+    <nav class="navy">
+            <ul class="navbar">
+                <li>Categories<i class='bx bx-chevron-down'></i></li>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+    </nav>
+    <div class="container">
+        <!-- Product Image Section -->
+        <div class="product-image">
+            <div class="c">
+            <img  src="p3.jpg" alt="Baby Girls Floral Dress">
+            <i class='bx bx-heart-circle' style='color:rgba(14,7,7,0.96);margin-left: 160px;font-size: 30px;' ></i></div>
+            <div class="thumbnail">
+                <img src="p3.jpg" alt="Thumbnail 1">
+                <img src="p3.jpg" alt="Thumbnail 2">
+                <img src="p3.jpg" alt="Thumbnail 3">
+                <img src="p3.jpg" alt="Thumbnail 4">
+            </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="product-details">
+            <h1>Baby Girls Modal Fabric Digital Printed Floral Stretchable Green 2pc Dungaree Dress</h1>
+           <i id="s" class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i>(477 reviews)
+            <p class="price"><span class="discounted">₹499</span> <del>₹1499</del>
+<div class="btns">
+            <div class="quantity">
+               <span>-</span>
+               <span>1</span>
+               <span>+</span>
+            </div>
+
+            <button class="add-to-cart">Add to Cart</button>
+</div>
+            <div class="features">
+                <div class="fl">
+                <i class='bx bx-package'></i>
+                <p>10 Days Return & Exchange</p> 
+                </div>
+                <div class="fl">
+                    <i class="fas fa-hand-holding-dollar"></i>
+                    <p>Cash/Pay on Delivery</p>
+                </div>     
+                <div class="fl">
+                    <i class="fa-solid fa-file-shield"></i>
+                    <p>Secure Transaction</p>
+                </div>   
+                <div class="fl">
+                    <i class="fa-solid fa-truck"></i>
+                    <p>Free Delivery</p>
+                </div>
+                <div class="fl">
+                    <i class="fa-solid fa-trophy"></i>
+                    <p>Top Brands</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="about">
+        <ul>
+            <h3>About this item</h3><br>
+            <li>DETAILS: Qty-1 Baby Dress|| Sleeve:Full Sleeve || Length:knee Length.</li>
+            <li>MATERIAL: Made with Premium Modal Fabric.</li>
+            <li>FIT: Niren Enterprise Dress Measures Knee-Length Suitable for all Age Ranges. Available in Varied Size.</li>
+            <li>DESIGN: Floral printed desugn with kitkat and fit and flare pattern.</li>
+            <li>COLOR DECLARATION: There might be slight variation in the actual color of the product due to different screen resolutions. Please check our size chart carefully before ordering.</li>
+        </ul>
+    </section>
+<section id="review">
+    <div class="main-review">
+        <h3 style="margin-left: 120px;">Customer Reviews</h3>
+        <button style="margin-right: 130px;">Write a review</button>
+    </div>
+    <div class="cus-review">
+        <div class="rev-box">
+            <div class="revc">
+           <img src="w1.jpg"><p style="margin-right: 1030px;margin-top: 10px;font-size: 20px;font-weight: bold;">Sarah</p>
+            <h3>⭐⭐⭐⭐⭐</h3></div><br>
+            <hr><br>
+            <p>Great quality baby dress! Soft fabric, perfect fit, and exactly as shown. Fast delivery and nice packaging.</p>
+            <br>
+            <p style="color: grey;">1 day ago</p>
+        </div>
+        <div class="rev-box">
+       <div class="revc">      <img src="w1.jpg"><p style="margin-right: 1030px;margin-top: 10px;font-size: 20px;font-weight: bold;">Emily</p>
+        <h3>⭐⭐⭐⭐⭐</h3></div><br>
+             <hr><br>
+             <p>Adorable baby Dress! super soft, great quality, and fits perfectly. Fast shipping and lovely packaging. Definitely buying again.</p>
+             <br>
+             <p style="color: grey;">a month ago</p>
+         </div>
+         <div class="rev-box">
+       <div class="revc">     <img src="w1.jpg"><p style="margin-right: 1030px;margin-top: 10px;font-size: 20px;font-weight: bold;">Daniel</p>
+        <h3>⭐⭐⭐⭐⭐</h3></div><br>
+             <hr><br>
+             <p>Excellent baby dress! soft, comfortable, and true to size. fast delivery and well packaged. Highly satisfied with my purchase.</p>
+             <br>
+             <p style="color: grey;">a month ago</p>
+         </div>
+    </div>
+    <button style="text-align: center;padding: 20px;margin-top: 40px;margin-left: 700px;">Show More<i class='bx bx-chevron-down'></i></button>
+</section>
+<section id="similar-products">
+    <div class="main-review">
+        <h3 style="margin-left: 120px;">Similar Products</h3>
+        <p style="margin-right: 130px;">View All</p>
+    </div>
+    <div class="best-product">
+        <div class="best-products">
+            <img src="p1.jpg">
+            <p style="color: grey;">Baby Clothes</p>
+            <p>Cotton Rompers Sleepsuits Jumpsuit for Infants Newborn Baby Boys & Girls..</p>
+            <h5>&#8377;199 <del style="margin-left: 10px;">&#8377;499</del><i id="s" class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i></h5>                
+            <div class="btn">    
+                <button style="padding: 4px;width: 110px;">Add to Cart</button>
+                <i class='bx bx-heart-circle' style='color:rgba(14,7,7,0.96);margin-left: 160px;font-size: 30px;' ></i>
+        </div></div>
+        <div class="best-products">
+            <img src="p2.jpg">
+            <p style="color: grey;">Baby Clothes</p>
+            <p>Cotton Rompers Sleepsuits Jumpsuit for Infants Newborn Baby Boys & Girls..</p>
+            <h5>&#8377;169 <del style="margin-left: 10px;">&#8377;699</del><i id="s" class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i></h5>                
+            <div class="btn">    
+                <button style="padding: 4px;width: 110px;">Add to Cart</button>
+                <i class='bx bx-heart-circle' style='color:rgba(14,7,7,0.96);margin-left: 160px;font-size: 30px;' ></i>
+        </div></div>
+        <div class="best-products">
+            <img src="p3.jpg">
+            <p style="color: grey;">Baby Clothes</p>
+            <p>Cotton Rompers Sleepsuits Jumpsuit for Infants Newborn Baby Boys & Girls..</p>
+            <h5>&#8377;499 <del style="margin-left: 10px;">&#8377;1599</del><i id="s" class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i></h5>                
+            <div class="btn">    
+                <button style="padding: 4px;width: 110px;">Add to Cart</button>
+                <i class='bx bx-heart-circle' style='color:rgba(14,7,7,0.96);margin-left: 160px;font-size: 30px;' ></i></div>
+        </div>
+        <div class="best-products">
+            <img src="p4.jpg">
+            <p style="color: grey;">Baby Clothes</p>
+            <p>Cotton Rompers Sleepsuits Jumpsuit for Infants Newborn Baby Boys & Girls..</p>
+            <h5>&#8377;498 <del style="margin-left: 10px;">&#8377;1599</del><i id="s" class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i><i class='bx bxs-star' style='color:rgba(241, 149, 11, 0.96)' ></i></h5>                
+            <div class="btn">    
+                <button style="padding: 4px;width: 110px;">Add to Cart</button>
+                <i class='bx bx-heart-circle' style='color:rgba(14,7,7,0.96);margin-left: 160px;font-size: 30px;' ></i>
+        </div></div>
+    </div>
+</section>
+
+<footer id="foot">
+    <div class="logos">
+     <img style="width: 150px;margin-left: 180px;margin-top: 30px;border-radius: 48%;" src="logo.jpg">
+        <h1 style="margin-top: 50px;">Tiny Fist Care</h1>
+       </div>
+    <div class="footcontainer">
+        <div class="box-1">
+            <h1>Explore</h1>
+            <h3>Home</h3>
+            <h3>Shop</h3>
+            <h3>Contact Us</h3>
+            <h3>About Us</h3>
+        </div>
+        <div class="box-2">
+            <h1>Address</h1>
+            <h3>6350288747</h3>
+            <p>Babyshop@gmail.com</p>
+            <p>South 7th Street</p>
+            <p>Chennai</p>
+        </div>
+        <div class="box-3">
+            <h1>Follow Us</h1>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-pinterest'></i>
+            <i class='bx bxl-whatsapp' ></i>
+            <i class='bx bxl-instagram-alt'></i>
+        </div>
+        </div>
+        <p style="color: grey;text-align: center;">2025 Beautyonline. All rights reserved</p>
+  </footer>
+</body>
+</html>

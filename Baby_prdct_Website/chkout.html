@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.head-container{
+    display: flex;
+    justify-content: space-around;
+}
+.search,.icons{
+    padding: 30px;
+    font-size: 30px;
+}
+.search{
+    position: relative;
+  
+    margin-right: 30px;
+}
+.search input{
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 200px;
+}
+.search i{
+    position: absolute;
+    left: 40px;
+    top: 22%;
+    transform: translateY(100%);
+    font-size: 20px;
+}
+.logo{
+    padding: 20px;
+}
+.logos{
+    display: flex;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 20px;
+    background-color: rgb(73, 233, 204);
+    padding: 20px;
+}
+.navbar li{
+    list-style-type: none;
+}
+.container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            gap: 20px;
+        }
+
+        .left{
+            display: grid;
+            gap: 15px;
+        }
+        .right{
+            display: grid;
+            gap: 15px;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group input, 
+        .input-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+        .address-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .name{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+       
+        .card-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            justify-content: space-evenly;
+        }
+
+        .payment-methods img {
+            width: 40px;
+        }
+
+        .pay-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #f4a261;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pay-btn:hover {
+            background-color: #e76f51;
+        }
+        .footcontainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(73, 233, 204);
+    margin-top: 40px;
+    line-height: 2;
+}
+#foot{
+    margin-top: 50px;
+    background-color: rgb(73, 233, 204);
+}
+.box-3 i{
+    font-size: 30px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="head-container">
+            <div class="logo">
+               <div class="logos">
+               <a href="task.html"> <img style="width: 150px;border-radius: 100%;" src="logo.jpg"></a>
+                <h1 style="margin-top: 30px;">Tiny Fist Care</h1>
+               </div>
+            </div>
+            <div class="search">
+                    <input type="text" placeholder="      Search...">
+                    <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="icons">
+                <i class='bx bx-heart'></i>
+                <i style="color: black;" class='bx bx-shopping-bag'></i>
+            </div>
+           
+        </div>
+    </header>
+    <!-- nav bar -->
+
+    <nav class="navy">
+            <ul class="navbar">
+                <li>Categories<i class='bx bx-chevron-down'></i></li>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+    </nav>
+
+    <!-- checkout out container -->
+     <section id="chkout">
+        <div class="container">
+            <!-- Contact & Shipping Address -->
+            <div class="left">
+                <h2>Contact</h2>
+                <div class="input-group">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Phone number">
+                </div>
+        
+                <h2>Shipping address</h2>
+                <div class="name">
+                <div class="input-group">
+                    <input type="text" placeholder="First name">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Last name">
+                </div></div>
+                <div class="input-group">
+                    <input type="text" placeholder="Address">
+                </div>
+                <div class="address-row">
+                    <div class="input-group">
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="input-group">
+                        <select>
+                            <option>State</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="ZIP code">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Payment Method</h2>
+                <div class="payment-methods">
+                    <i class="fa-brands fa-google-pay"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+        
+                <h2>Payment Details</h2>
+                <div class="input-group">
+                    <input type="text" placeholder="Card Holder Name">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Card Number">
+                </div>
+        
+                <!-- Expiry Date & CVV in one row -->
+                <div class="card-row">
+                    <div class="input-group">
+                        <input type="text" placeholder="Expiry Date">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="CVV">
+                    </div>
+                </div>
+        
+              <a href="spin.html">  <button class="pay-btn">Pay ₹688</button></a>
+            </div>
+        </div>
+     </section>
+     <footer id="foot">
+        <div class="logos">
+         <img style="width: 150px;margin-left: 180px;margin-top: 30px;border-radius: 48%;" src="logo.jpg">
+            <h1 style="margin-top: 50px;">Tiny Fist Care</h1>
+           </div>
+        <div class="footcontainer">
+            <div class="box-1">
+                <h1>Explore</h1>
+                <h3>Home</h3>
+                <h3>Shop</h3>
+                <h3>Contact Us</h3>
+                <h3>About Us</h3>
+            </div>
+            <div class="box-2">
+                <h1>Address</h1>
+                <h3>6350288747</h3>
+                <p>Babyshop@gmail.com</p>
+                <p>South 7th Street</p>
+                <p>Chennai</p>
+            </div>
+            <div class="box-3">
+                <h1>Follow Us</h1>
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-pinterest'></i>
+                <i class='bx bxl-whatsapp' ></i>
+                <i class='bx bxl-instagram-alt'></i>
+            </div>
+            </div>
+            <p style="color: grey;text-align: center;">2025 Beautyonline. All rights reserved</p>
+      </footer>
+</body>
+</html>

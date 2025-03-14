@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .signup label{
+        font-size: 20px;
+    }
+    
+.signup input{
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+}
+.a i{
+    position: absolute;
+    left: 10px;
+    top: 90px;
+    font-size: 25px;
+}
+.b i{
+    position: absolute;
+    left: 10px;
+    top: 200px;
+    font-size: 25px;
+}
+.c i{
+    position: absolute;
+    left:400px;
+    top: 200px;
+    font-size: 25px;
+}
+.signup{
+    display: grid;
+    margin: 100px;   
+    position: relative;
+    width: 450px;
+}
+.bt{
+    width: 100%;
+            padding: 12px;
+            background-color: #f4a261;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            
+}
+body{
+    display: flex;
+    gap: 80px;
+    position: relative;
+}
+.photo{
+    position: absolute;
+    bottom: 20px;
+    right: 360px;
+    
+}
+.photo img{
+    width: 400px;
+    height: 500px;
+}
+.social{
+    text-align: center;
+}
+.social i{
+    font-size: 20px;
+}
+</style>
+<body>
+   
+    <div class="signup">
+        <h1>Welcome Back!!</h1>
+        <form>
+            <div class="a">  <label>Email</label><br><br>
+            <input type="email" placeholder="       youremail@gmail.com"><i class='bx bx-envelope'></i></div>
+            <br>
+            <!-- <div class="b"> <label>Email</label><br><br>
+         <input type="email" placeholder="       youremail@gmail.com"><i class='bx bx-phone'></i></div>
+            <br> -->
+            <div class="c">  <label>Password</label><br><br>
+           <input  type="password" placeholder="     Enter your password"><i class='bx bx-low-vision'></i></div><i style="position: relative;bottom: 35px; left: 10px;font-size: 25px;" class='bx bx-lock-alt'></i>
+        </form>
+        <p style="position: relative;bottom: 20px;margin-left: 340px;">forget password?</p>
+        <button class="bt">Login</button>
+        <p style="text-align: center;padding: 30px;">or</p>
+       <div class="social"> <i class='bx bxl-google'></i> <i class='bx bxl-apple' style='color:#1d1e1f'  ></i> <i class='bx bxl-facebook-circle' style='color:#187ee5'  ></i></div>
+     <a style="text-decoration: none;" href="signup.html">   <p style="text-align: center;">Dont have an account? <span style="color: #f4a261;">Signup</span></p></a>
+    </div>
+    <div class="photo">
+        <img src="signin.jpg">
+    </div>
+</body>
+</html>

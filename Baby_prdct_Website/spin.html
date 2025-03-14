@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>success</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+       .payment{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* Loader Animation */
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite, hideLoader 0.5s ease-in-out 3s forwards;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .success {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            margin-top: 10px;
+            opacity: 0;
+            animation: showSuccess 0.5s ease-in-out 3s forwards;
+            text-align: center;
+        }
+
+        @keyframes showSuccess {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes hideLoader {
+            to { opacity: 0; visibility: hidden; }
+        }
+        .head-container{
+    display: flex;
+    justify-content: space-around;
+}
+.search,.icons{
+    padding: 50px;
+    font-size: 30px;
+}
+.search{
+    position: relative;
+    /* border: 2px solid black; */
+    margin-right: 30px;
+}
+.search input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+}
+.search i{
+    position: absolute;
+    left: 60px;
+    top: 26%;
+    transform: translateY(100%);
+    font-size: 25px;
+}
+.logo{
+    padding: 20px;
+}
+.logos{
+    display: flex;
+}
+.ic{
+    margin-top: 30px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div style=" background-color: rgb(73, 233, 204);" class="head-container">
+            <div class="logo">
+               <div class="logos">
+                <img style="width: 150px;border-radius: 100%;" src="logo.jpg">
+                <h1 style="margin-top: 30px;">Tiny Fist Care</h1>
+               </div>
+            </div>
+            <div class="search">
+                    <input type="text" placeholder="      Search...">
+                    <i class='bx bx-search-alt-2'></i>
+            </div>
+            <div class="icons">
+                <i class='bx bx-heart'></i>
+                <a href="n.html"><i style="color: black;" class='bx bx-shopping-bag'></i></a>
+            </div>
+           <div class="ic"> <a style="text-decoration: none;" href="signup.html"><h3>Signup</h3></a></div>
+        </div>
+    </header>
+    <div class="payment">
+<h1 style="text-align: center;font-size: 48px;">Payment</h1>
+    <div class="loader"></div>
+    <div class="success"> <h1 style="text-align: center;font-size: 50px;">✅</h1>
+        <h1>Payment Successful</h1>
+      <a href="task.html">  <button style="padding: 15px;font-size: 20px;">Go Home</button></a>
+    </div>
+</div>
+</body>
+</html>
